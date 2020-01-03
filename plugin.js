@@ -1,7 +1,14 @@
-function request_tos_api()
+let dom = document.getElementById("iSecondlyAJAX");
+
+const request_action = ({ data, dom }) =>
 {
-    // console.log('Hello');
+    console.log({ data, dom });
+    dom.innerText = data.title;
+};
+
+const request_iSecondlyAJAX_api = () =>
+{
     fetch('https://jsonplaceholder.typicode.com/todos/1')
     .then(response => response.json())
-    .then(json => console.log(json))
+    .then(data => request_action({ data, dom }));
 }

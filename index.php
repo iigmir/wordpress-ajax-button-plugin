@@ -22,7 +22,7 @@ function js_text()
 
 function form_tos()
 {
-    $tos_btn = "<button class='iSecondlyToS' type='button' onclick='request_tos_api()'>AJAX Request</button>";
+    $tos_btn = "<button id='iSecondlyAJAX' class='iSecondlyAJAX' type='button' onclick='request_iSecondlyAJAX_api()'>AJAX Request</button>";
     $css_text = css_text();
     $js_text = js_text();
     $tos = $tos_btn . $css_text . $js_text;
